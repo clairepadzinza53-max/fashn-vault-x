@@ -1,0 +1,19 @@
+{
+  "name": "fashn-vault-x",
+  "version": "1.0.0",
+  "description": "FASHN VAULT X MVP with free-tier-friendly Express backend and luxury fashion frontend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "fashion",
+    "mvp",
+    "express",
+    "free-tier"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

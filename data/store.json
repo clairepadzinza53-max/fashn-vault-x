@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "id": "usr_774df5b18196",
+      "username": "vault-admin",
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "bio": "Platform curator and brand dashboard operator.",
+      "interests": [
+        "luxury",
+        "analytics",
+        "branding"
+      ],
+      "createdAt": "2026-04-19T13:01:56.486Z",
+      "isAdmin": true
+    },
+    {
+      "id": "usr_9d4393453d53",
+      "username": "noir.archive",
+      "passwordHash": "d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791",
+      "bio": "Monochrome editorials and dramatic layers.",
+      "interests": [
+        "minimalist",
+        "avant-garde",
+        "outerwear"
+      ],
+      "createdAt": "2026-04-19T13:01:56.486Z",
+      "isAdmin": false
+    }
+  ],
+  "sessions": [],
+  "posts": [
+    {
+      "id": "post_a04e2dc15170",
+      "designId": "DVX-MO5RZD4A",
+      "title": "Ivory Frame Coat",
+      "description": "Structured outerwear with a gallery-clean silhouette and tonal restraint.",
+      "tags": [
+        "minimalist",
+        "ivory",
+        "outerwear",
+        "luxury"
+      ],
+      "style": "Minimalist",
+      "color": "Ivory",
+      "type": "Outerwear",
+      "imageData": "",
+      "creatorUserId": "usr_9d4393453d53",
+      "creatorUsername": "noir.archive",
+      "likes": [],
+      "saves": [],
+      "createdAt": "2026-04-19T13:01:56.486Z",
+      "ownership": {
+        "designId": "DVX-MO5RZD4A",
+        "creatorUserId": "usr_9d4393453d53",
+        "creatorUsername": "noir.archive",
+        "timestamp": "2026-04-19T13:01:56.486Z"
+      }
+    },
+    {
+      "id": "post_7f24c99c08c3",
+      "designId": "DVX-MO5RZD4B",
+      "title": "Night Code Set",
+      "description": "Sharp black tailoring softened with fluid fabric and street-luxury layering.",
+      "tags": [
+        "black",
+        "tailoring",
+        "streetwear",
+        "set"
+      ],
+      "style": "Street Luxury",
+      "color": "Black",
+      "type": "Set",
+      "imageData": "",
+      "creatorUserId": "usr_774df5b18196",
+      "creatorUsername": "vault-admin",
+      "likes": [
+        "usr_9d4393453d53"
+      ],
+      "saves": [],
+      "createdAt": "2026-04-19T13:01:56.486Z",
+      "ownership": {
+        "designId": "DVX-MO5RZD4B",
+        "creatorUserId": "usr_774df5b18196",
+        "creatorUsername": "vault-admin",
+        "timestamp": "2026-04-19T13:01:56.486Z"
+      }
+    }
+  ],
+  "ads": [
+    {
+      "id": "ad_03ee1aa62d16",
+      "title": "AD SPACE • Luxury Capsule Placement",
+      "image": "",
+      "link": "https://example.com",
+      "description": "This reserved slot shows where sponsored placements and future ad network units can appear.",
+      "source": "system",
+      "impressions": 1,
+      "clicks": 0,
+      "createdAt": "2026-04-19T13:01:56.486Z",
+      "createdByUserId": null,
+      "active": true
+    },
+    {
+      "id": "ad_9f557c2fbc05",
+      "title": "Maison Future Brand Slot",
+      "image": "",
+      "link": "https://example.com",
+      "description": "Direct brand campaigns can plug into this structure without redesigning the feed.",
+      "source": "brand",
+      "impressions": 0,
+      "clicks": 0,
+      "createdAt": "2026-04-19T13:01:56.486Z",
+      "createdByUserId": null,
+      "active": true
+    }
+  ]
+}

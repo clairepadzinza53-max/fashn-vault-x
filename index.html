@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FASHN VAULT X</title>
+  <meta
+    name="description"
+    content="FASHN VAULT X is a free-tier-ready fashion archive, discovery feed, trend tracker, and ad-monetization MVP."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero" id="top">
+      <nav class="topbar">
+        <a class="brand" href="#top">
+          <span class="brand-mark">FVX</span>
+          <span class="brand-copy">
+            <strong>FASHN VAULT X</strong>
+            <small>Fashion assets. Trend signals. Ad-ready growth.</small>
+          </span>
+        </a>
+        <div class="topbar-links">
+          <a href="#auth">Access</a>
+          <a href="#upload">Upload</a>
+          <a href="#feed">Feed</a>
+          <a href="#analytics">Analytics</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Free-tier full-stack MVP</p>
+          <h1>Archive fashion culture like an asset, not a post.</h1>
+          <p class="lede">
+            FASHN VAULT X turns every upload into a timestamped design record, tracks tag momentum,
+            inserts simulated ad inventory into the discovery feed, and keeps the architecture ready
+            for real ad networks or direct brand sponsorships later.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#feed">Explore the feed</a>
+            <a class="button button-dark" href="#upload">Upload a look</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-stat">
+            <span>Trending now</span>
+            <strong id="hero-trend">Loading...</strong>
+          </div>
+          <div class="hero-stat">
+            <span>Estimated ad revenue</span>
+            <strong id="hero-revenue">$0.00</strong>
+          </div>
+          <div class="hero-stat">
+            <span>Tracked fashion assets</span>
+            <strong id="hero-assets">0</strong>
+          </div>
+          <div class="hero-note">
+            Built with static frontend assets, Node.js + Express backend routes, and JSON persistence so it can run on free hosting while staying migration-ready for Firestore later.
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="main-grid">
+      <section class="panel auth-panel" id="auth">
+        <div class="section-heading">
+          <p class="eyebrow">Access Layer</p>
+          <h2>User accounts and creator profiles</h2>
+        </div>
+
+        <div class="auth-grid">
+          <form class="card form-card" id="signup-form">
+            <h3>Create account</h3>
+            <label>
+              <span>Username</span>
+              <input name="username" type="text" placeholder="atelier.noir" required>
+            </label>
+            <label>
+              <span>Password</span>
+              <input name="password" type="password" placeholder="Create a password" required>
+            </label>
+            <label>
+              <span>Bio</span>
+              <textarea name="bio" rows="4" placeholder="Tell the platform about your fashion point of view."></textarea>
+            </label>
+            <label>
+              <span>Fashion interests</span>
+              <input name="interests" type="text" placeholder="minimal, editorial, denim, neutral">
+            </label>
+            <button class="button button-dark" type="submit">Sign up</button>
+          </form>
+
+          <form class="card form-card" id="login-form">
+            <h3>Login</h3>
+            <label>
+              <span>Username</span>
+              <input name="username" type="text" placeholder="vault-admin" required>
+            </label>
+            <label>
+              <span>Password</span>
+              <input name="password" type="password" placeholder="Enter password" required>
+            </label>
+            <button class="button button-light" type="submit">Login</button>
+            <p class="hint">Demo admin: <strong>vault-admin</strong> / <strong>admin123</strong></p>
+            <p class="hint">Demo creator: <strong>noir.archive</strong> / <strong>demo123</strong></p>
+          </form>
+
+          <div class="card session-card">
+            <h3>Session</h3>
+            <p id="session-state">No active session.</p>
+            <div class="profile-snapshot" id="profile-snapshot"></div>
+            <form id="profile-form" class="form-card compact-form">
+              <label>
+                <span>Bio</span>
+                <textarea name="bio" rows="3" placeholder="Update your creator profile."></textarea>
+              </label>
+              <label>
+                <span>Fashion interests</span>
+                <input name="interests" type="text" placeholder="tailoring, avant-garde, streetwear">
+              </label>
+              <button class="button button-dark" type="submit">Save profile</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel upload-panel" id="upload">
+        <div class="section-heading">
+          <p class="eyebrow">Ownership System</p>
+          <h2>Upload a fashion asset record</h2>
+        </div>
+
+        <div class="two-column">
+          <form class="card form-card" id="upload-form">
+            <label>
+              <span>Title</span>
+              <input name="title" type="text" placeholder="Structured Noir Coat" required>
+            </label>
+            <label>
+              <span>Description</span>
+              <textarea name="description" rows="4" placeholder="Describe silhouette, mood, craft, and styling." required></textarea>
+            </label>
+            <div class="input-grid">
+              <label>
+                <span>Tags</span>
+                <input name="tags" type="text" placeholder="black, tailoring, luxury, winter">
+              </label>
+              <label>
+                <span>Style</span>
+                <input name="style" type="text" placeholder="Quiet Luxury">
+              </label>
+              <label>
+                <span>Color</span>
+                <input name="color" type="text" placeholder="Black">
+              </label>
+              <label>
+                <span>Fashion type</span>
+                <input name="type" type="text" placeholder="Coat">
+              </label>
+            </div>
+            <label>
+              <span>Image upload</span>
+              <input name="imageFile" id="image-file" type="file" accept="image/*">
+            </label>
+            <label>
+              <span>Or image URL</span>
+              <input name="imageUrl" type="url" placeholder="https://example.com/look.jpg">
+            </label>
+            <button class="button button-light" type="submit">Create asset record</button>
+          </form>
+
+          <div class="stack-column">
+            <div class="card ownership-card">
+              <h3>Latest ownership record</h3>
+              <div id="ownership-record" class="ownership-record">Upload a look to generate a Design ID, timestamp, and creator ownership record.</div>
+            </div>
+
+            <div class="card premium-card">
+              <div class="premium-head">
+                <span class="lock-badge">Premium Placeholder</span>
+                <h3>Boosted posts, creator insights, advanced analytics</h3>
+              </div>
+              <p>
+                This locked panel shows where premium monetization can grow later without changing the core architecture.
+                The UI is intentionally present now so upgrade flows can be added without redesigning the product.
+              </p>
+              <div class="premium-grid">
+                <div class="premium-item">Boosted placement queue</div>
+                <div class="premium-item">Advanced trend analytics</div>
+                <div class="premium-item">Creator performance insights</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="feed">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Discovery Feed</p>
+            <h2>Pinterest-style fashion grid</h2>
+          </div>
+          <form id="filter-form" class="filter-bar">
+            <input name="q" type="search" placeholder="Search looks, tags, styles, creators">
+            <input name="tag" type="text" placeholder="Tag">
+            <input name="style" type="text" placeholder="Style">
+            <input name="color" type="text" placeholder="Color">
+            <input name="type" type="text" placeholder="Type">
+            <button class="button button-dark" type="submit">Filter</button>
+            <button class="button button-ghost" type="button" id="clear-filters">Clear</button>
+          </form>
+        </div>
+
+        <div id="active-filters" class="active-filters"></div>
+        <div id="feed-grid" class="feed-grid"></div>
+      </section>
+
+      <section class="panel" id="analytics">
+        <div class="section-heading">
+          <p class="eyebrow">Trend + Revenue Layer</p>
+          <h2>Analytics for creators, brands, and admin</h2>
+        </div>
+
+        <div class="stats-grid">
+          <div class="card stat-card">
+            <h3>Trending styles</h3>
+            <div id="trending-styles" class="metric-list"></div>
+          </div>
+          <div class="card stat-card">
+            <h3>Rising tags</h3>
+            <div id="rising-tags" class="metric-list"></div>
+          </div>
+          <div class="card stat-card">
+            <h3>Most liked fashion types</h3>
+            <div id="most-liked-types" class="metric-list"></div>
+          </div>
+          <div class="card stat-card">
+            <h3>Most active creators</h3>
+            <div id="active-creators" class="metric-list"></div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="card stat-card">
+            <h3>Ad performance</h3>
+            <div id="ad-performance" class="metric-list"></div>
+          </div>
+          <div class="card stat-card">
+            <h3>Estimated earnings dashboard</h3>
+            <div id="earnings-dashboard" class="metric-list"></div>
+          </div>
+          <div class="card stat-card">
+            <h3>Top ad units</h3>
+            <div id="top-ads" class="metric-list"></div>
+          </div>
+          <div class="card stat-card admin-card">
+            <h3>Brand ad uploader</h3>
+            <form id="ad-form" class="form-card compact-form">
+              <label>
+                <span>Ad title</span>
+                <input name="title" type="text" placeholder="Campaign title">
+              </label>
+              <label>
+                <span>Image URL</span>
+                <input name="image" type="url" placeholder="https://example.com/campaign.jpg">
+              </label>
+              <label>
+                <span>Destination link</span>
+                <input name="link" type="url" placeholder="https://brand.example.com">
+              </label>
+              <label>
+                <span>Description</span>
+                <textarea name="description" rows="3" placeholder="Short brand message for the slot."></textarea>
+              </label>
+              <button class="button button-light" type="submit">Create brand ad</button>
+            </form>
+            <p class="hint">Admin only for now. This keeps the future sponsor workflow isolated and easy to scale later.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
