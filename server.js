@@ -770,5 +770,5 @@ if (require.main === module) {
     console.log(`FASHN VAULT X running on http://localhost:${PORT}`);
   });
 }
-
+app.get("/", (req, res) => {res.send("FASHN VAULT X is live");});
 module.exports = app;
